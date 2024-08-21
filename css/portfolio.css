@@ -49,7 +49,7 @@ main h1{
 }
 
 #home{
-    height: 100vh;
+    min-height: 100vh;
     display:flex;
     flex-direction: column;
     justify-content: center;
@@ -82,7 +82,7 @@ main h1{
 }
 
 #about {
-    height: 75vh;
+    min-height: 75vh;
     padding : 50px 20px;
     background-color: #f4f4f4;
     color: #333333;
@@ -123,7 +123,7 @@ about-text{
     padding: 2px;
 }
 #education {
-    height: 75vh;
+    min-height: 75vh;
     padding: 50px 20px;
     background-color: #f4f4f4;
     color: #333333;
@@ -139,6 +139,10 @@ about-text{
 .education-layout{
     display: flex;
     align-items: center;
+    justify-content: space-between;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
 }
 
 .college-image{
@@ -159,7 +163,7 @@ about-text{
     color: #1A237E;
 }
 #projects{
-    height: 75vh;
+    min-height: 75vh;
     padding: 50px 20px;
     background-color: #f4f4f4;
     color: #333333;
@@ -189,7 +193,7 @@ about-text{
     color: #1A237E;
 }
 #skills{
-    height: 90vh;
+    min-height: 90vh;
     padding: 50px 20px;
     background-color: #f4f4f4;
     color: #333333;
@@ -236,7 +240,7 @@ about-text{
 }
 
 #contact{
-    height: 50vh;
+    min-height: 50vh;
     padding: 50px 20px;
     background-color: #f4f4f4;
     color: #333333;
@@ -253,6 +257,7 @@ about-text{
 .contact-info{
     display: flex;
     justify-content: center;
+    flex-direction: column;
     align-items: center;
     max-width: 600px;
     margin: 0 auto;
@@ -303,4 +308,83 @@ footer .footer-content {
 
 footer p {
     margin: 0;
+}
+@media screen and (max-width: 768px) {
+    header nav ul.container{
+        flex-direction: column;
+    }
+
+    #home .home-content{
+        flex-direction: column;
+    }
+
+    #home h1{
+        font-size: 2.5em;
+    }
+
+    #home img{
+        width: 150px;
+    }
+
+    .about-content{
+        flex-direction: column;
+    }
+
+    .about-image{
+        margin: 0 auto;
+        width: 80%;
+    }
+    .education-layout{
+        flex-direction: column;
+    }
+
+    .college-image{
+        margin: 0 auto;
+        width: 80%;
+    }
+
+    #education .education-text{
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .education-text h3{
+        font-size: 1.5em;
+    }
+
+    #projects{
+        height: auto;
+        padding: 20px 10px;
+    }
+
+    .projects-content{
+        max-width: 100%;
+        text-align: center;
+    }
+
+    #skills{
+        padding: 20px 10px;
+    }
+
+    .skills-content{
+        max-width: 100%;
+        text-align: center;
+    }
+
+    #skills .skill-category h3{
+        font-size: 1.5em;
+    }
+
+    #contact {
+        padding: 20px 10px;
+    }
+
+    .separator{
+        margin: 10px 10px;
+        height: 2px;
+        width: 80%;
+    }
+    .footer-content{
+        padding: 20px 10px;
+    }
 }
