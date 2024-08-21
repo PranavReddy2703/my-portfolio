@@ -285,8 +285,9 @@ about-text{
 }
 
 .separator{
-    height: 30px;
-    width: 2px;
+    margin: 15px 15px;
+    height: 2px;
+    width: 300px;
     background-color: #1A237E;
 }
 
