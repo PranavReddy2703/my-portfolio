@@ -314,6 +314,10 @@ footer p {
         flex-direction: column;
     }
 
+    #home{
+        min-height: 75vh;
+    }
+
     #home .home-content{
         flex-direction: column;
     }
@@ -326,6 +330,9 @@ footer p {
         width: 150px;
     }
 
+    #about{
+        min-height: 50vh;
+    }
     .about-content{
         flex-direction: column;
     }
@@ -353,7 +360,7 @@ footer p {
     }
 
     #projects{
-        height: auto;
+        min-height: 50vh;
         padding: 20px 10px;
     }
 
@@ -364,6 +371,7 @@ footer p {
 
     #skills{
         padding: 20px 10px;
+        min-height: 50vh;
     }
 
     .skills-content{
@@ -377,6 +385,7 @@ footer p {
 
     #contact {
         padding: 20px 10px;
+        min-height: 30vh;
     }
 
     .separator{
