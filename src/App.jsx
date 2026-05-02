@@ -6,6 +6,7 @@ import About from "./components/sections/About";
 import '@fontsource/plus-jakarta-sans/500.css';
 import '@fontsource/plus-jakarta-sans/700.css';
 import '@fontsource/plus-jakarta-sans/800.css';
+import Skills from "./components/sections/Skills";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
       <main className="relative z-10">
         <Hero />
         <About />
+        <Skills />
       </main>
     </div>
   );
