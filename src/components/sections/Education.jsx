@@ -41,7 +41,7 @@ function EducationCard({ item, align = "left" }) {
   const Icon = item.icon;
 
   return (
-    <div className="group relative w-[18rem] rounded-[1.25rem] border border-white/[0.08] bg-[#0A0A0E]/80 p-4 shadow-[inset_1px_1px_0_rgba(255,255,255,0.5),0_8px_30px_rgba(0,0,0,0.4)] backdrop-blur-md transition-all duration-500 hover:-translate-y-1 hover:border-[#7F5AF0]/40 hover:bg-[linear-gradient(145deg,rgba(127,90,240,0.1)_0%,rgba(10,10,14,0.9)_100%)] hover:shadow-[0_0_40px_rgba(127,90,240,0.15)] md:p-5 lg:w-[21rem]">
+    <div className="group relative w-[18rem] rounded-[1.25rem] border border-white/[0.08] bg-[#0A0A0E]/80 p-4 shadow-[inset_1px_1px_0_rgba(255,255,255,0.08),0_8px_30px_rgba(0,0,0,0.4)] backdrop-blur-md transition-all duration-500 hover:-translate-y-1 hover:border-[#7F5AF0]/40 hover:bg-[linear-gradient(145deg,rgba(127,90,240,0.1)_0%,rgba(10,10,14,0.9)_100%)] hover:shadow-[0_0_40px_rgba(127,90,240,0.15)] md:p-5 lg:w-[21rem]">
       <div className="flex items-center gap-3">
         <div
           className={`flex h-10 w-10 shrink-0 items-center justify-center rounded-full border transition-colors duration-500 md:h-12 md:w-12 ${
@@ -117,7 +117,7 @@ export default function Education() {
             right: "-6%",
             top: "15%",
             background:
-              "radial-gradient(circle, rgba(127,90,240,1) 0%, rgba(127,90,240,0.08) 28%, rgba(76,29,149,0) 72%)",
+              "radial-gradient(circle, rgba(127,90,240,.35) 0%, rgba(127,90,240,0.08) 28%, rgba(76,29,149,0) 72%)",
             filter: "blur(75px)",
           }}
         />
