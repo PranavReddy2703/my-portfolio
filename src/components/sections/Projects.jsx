@@ -236,11 +236,6 @@ export default function Projects() {
               />
             ))}
           </div>
-
-          <div className="mt-6 text-center text-sm text-[#7F5AF0]/90">
-            {String(activeIndex + 1).padStart(2, "0")} /{" "}
-            {String(projects.length).padStart(2, "0")} — {activeProject.title}
-          </div>
         </div>
       </div>
     </section>
