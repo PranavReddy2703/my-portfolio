@@ -50,10 +50,10 @@ function Hero() {
               </a>
 
               <a
-                href="#about"
+                href="#contact"
                 className="inline-flex items-center gap-3 rounded-full border border-white/10 bg-white/[0.02] px-7 py-4 text-sm font-bold uppercase tracking-[0.14em] text-[#F1F1F1] shadow-[inset_1px_1px_0_rgba(255,255,255,0.08)] backdrop-blur-sm transition-all duration-300 hover:border-white/20 hover:bg-white/[0.05]"
               >
-                About Me
+                Contact Me
               </a>
             </div>
           </div>
@@ -65,11 +65,11 @@ function Hero() {
                 name=""
                 title=""
                 handle="pranavreddy2703"
-                status="Open to opportunities"
+                status="Always Learning"
                 contactText="Let's Talk"
                 showUserInfo={false}
                 enableTilt={true}
-                enableMobileTilt={false}
+                enableMobileTilt={true}
                 behindGlowEnabled={false}
                 className="mx-auto"
               />

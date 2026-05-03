@@ -311,7 +311,7 @@ function About() {
                 </a>
 
                 <a
-                  href="https://www.linkedin.com/"
+                  href="https://www.linkedin.com/pranav-reddy-atakula-278430268/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex h-[4rem] w-[4rem] items-center justify-center rounded-full border border-white/[0.06] bg-white/[0.02] text-white transition-all duration-300 hover:border-[#7F5AF0]/40 hover:bg-white/[0.05] hover:shadow-[0_0_30px_rgba(127,90,240,0.12)] sm:h-[4.5rem] sm:w-[4.5rem]"

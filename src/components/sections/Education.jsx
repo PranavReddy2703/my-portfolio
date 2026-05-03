@@ -37,7 +37,7 @@ const educationData = [
   },
 ];
 
-function EducationCard({ item, align = "left" }) {
+function EducationCard({ item }) {
   const Icon = item.icon;
 
   return (
@@ -80,64 +80,69 @@ export default function Education() {
   return (
     <section
       id="education"
-      className="relative flex h-[100dvh] min-h-[600px] flex-col overflow-hidden px-6 pb-24 pt-8 md:px-10 lg:px-12 scroll-mt-16"
+      // Changed to h-[100dvh] for strict 100vh height (dvh fixes mobile browser bars)
+      // Changed overflow-visible to overflow-hidden so the fixed height doesn't create scrollbars
+      className="relative isolate overflow-visible px-6 h-[100dvh] scroll-mt-16 md:px-10 lg:px-12"
     >
-      <div className="pointer-events-none absolute inset-0 -z-10 overflow-hidden">
+      <div className="pointer-events-none absolute inset-0 -z-10 overflow-visible">
         <div
           className="absolute rounded-full"
           style={{
-            width: "32rem",
-            height: "20rem",
-            left: "-15%",
+            width: "40rem",
+            height: "24rem",
+            left: "-22%",
+            top: "4%",
+            background:
+              "radial-gradient(circle, rgba(127,90,240,.8) 0%, rgba(127,90,240,.2) 34%, rgba(76,29,149,0) 76%)",
+            filter: "blur(90px)",
+          }}
+        />
+
+        <div
+          className="absolute rounded-full"
+          style={{
+            width: "34rem",
+            height: "34rem",
+            left: "38%",
+            bottom: "-20%",
+            background:
+              "radial-gradient(circle, rgba(127,90,240,0.28) 0%, rgba(127,90,240,0.10) 30%, rgba(127,90,240,0.04) 46%, rgba(76,29,149,1) 76%)",
+            filter: "blur(96px)",
+          }}
+        />
+
+        <div
+          className="absolute rounded-full"
+          style={{
+            width: "28rem",
+            height: "28rem",
+            right: "-12%",
             top: "10%",
             background:
-              "radial-gradient(circle, rgba(127,90,240,.3) 0%, rgba(127,90,240,.4) 26%, rgba(127,90,240,.25) 42%, rgba(76,29,149,0) 76%)",
-            filter: "blur(70px)",
+              "radial-gradient(circle, rgba(127,90,240,.24) 0%, rgba(127,90,240,0.07) 30%, rgba(76,29,149,0) 72%)",
+            filter: "blur(88px)",
           }}
         />
 
         <div
           className="absolute rounded-full"
           style={{
-            width: "35rem",
-            height: "35rem",
-            left: "40%",
-            bottom: "-18%",
+            width: "12rem",
+            height: "12rem",
+            left: "42%",
+            top: "16%",
             background:
-              "radial-gradient(circle, rgba(127,90,240,0.50) 0%, rgba(127,90,240,0.12) 26%, rgba(127,90,240,0.05) 42%, rgba(76,29,149,0) 76%)",
-            filter: "blur(85px)",
-          }}
-        />
-
-        <div
-          className="absolute rounded-full"
-          style={{
-            width: "24rem",
-            height: "24rem",
-            right: "-6%",
-            top: "15%",
-            background:
-              "radial-gradient(circle, rgba(127,90,240,.35) 0%, rgba(127,90,240,0.08) 28%, rgba(76,29,149,0) 72%)",
-            filter: "blur(75px)",
-          }}
-        />
-
-        <div
-          className="absolute rounded-full"
-          style={{
-            width: "10rem",
-            height: "10rem",
-            left: "45%",
-            top: "18%",
-            background:
-              "radial-gradient(circle, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0.02) 35%, rgba(255,255,255,0) 75%)",
-            filter: "blur(30px)",
+              "radial-gradient(circle, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.015) 35%, rgba(255,255,255,0) 75%)",
+            filter: "blur(42px)",
           }}
         />
       </div>
 
-      <div className="mx-auto flex h-full w-full max-w-7xl flex-col 2xl:max-w-[1440px]">
-        <div className="shrink-0 text-left">
+      {/* Changed to flex flex-col h-full with top/bottom padding */}
+      <div className="mx-auto w-full max-w-7xl 2xl:max-w-[1440px] flex flex-col h-full py-12 lg:py-16">
+        
+        {/* Heading remains at top (shrink-0 prevents it from squishing) */}
+        <div className="text-left shrink-0">
           <h2 className="text-4xl font-extrabold uppercase tracking-[-0.05em] text-[#F1F1F1] sm:text-5xl md:text-6xl">
             EDUCATION
           </h2>
@@ -146,65 +151,78 @@ export default function Education() {
           </p>
         </div>
 
-        <div className="relative hidden w-full flex-1 items-center md:flex">
-          <div className="absolute left-0 right-0 top-1/2 h-1.5 -translate-y-1/2 rounded-full bg-white/[0.05] shadow-[inset_0_1px_2px_rgba(0,0,0,0.5)]" />
+        {/* 
+          DESKTOP TIMELINE 
+          flex-1 takes all remaining space. items-center aligns it perfectly in the middle vertically. 
+        */}
+        <div className="hidden md:flex flex-1 items-center justify-center w-full">
+          <div className="relative w-full h-[28rem]">
+            <div className="absolute left-0 right-0 top-1/2 h-1.5 -translate-y-1/2 rounded-full bg-white/[0.05] shadow-[inset_0_1px_2px_rgba(0,0,0,0.5)]" />
 
-          <div className="absolute left-0 top-1/2 h-1.5 w-[85%] -translate-y-1/2 rounded-full bg-gradient-to-r from-[#7F5AF0]/20 via-[#7F5AF0] to-[#7F5AF0] shadow-[0_0_20px_rgba(127,90,240,0.6)]" />
+            <div className="absolute left-0 top-1/2 h-1.5 w-[85%] -translate-y-1/2 rounded-full bg-gradient-to-r from-[#7F5AF0]/20 via-[#7F5AF0] to-[#7F5AF0] shadow-[0_0_20px_rgba(127,90,240,0.6)]" />
 
-          {educationData.map((item) => (
-            <div
-              key={item.id}
-              className="absolute top-1/2 flex -translate-x-1/2 -translate-y-1/2 flex-col items-center"
-              style={{ left: item.xPos }}
-            >
-              {item.position === "top" && (
-                <div className="absolute bottom-full mb-2 flex flex-col items-center md:mb-3">
-                  <div className="mb-2 md:mb-3">
-                    <EducationCard item={item} />
+            {educationData.map((item) => (
+              <div
+                key={item.id}
+                className="absolute top-1/2 flex -translate-x-1/2 -translate-y-1/2 flex-col items-center"
+                style={{ left: item.xPos }}
+              >
+                {item.position === "top" && (
+                  <div className="absolute bottom-full mb-3 flex flex-col items-center">
+                    <div className="mb-3">
+                      <EducationCard item={item} />
+                    </div>
+                    <div className="h-16 w-px bg-gradient-to-t from-[#7F5AF0] to-transparent opacity-60" />
                   </div>
-                  <div className="h-[8vh] min-h-[2rem] max-h-[5rem] w-px bg-gradient-to-t from-[#7F5AF0] to-transparent opacity-60" />
-                </div>
-              )}
+                )}
 
-              <div className="relative z-10 flex items-center justify-center">
-                <div
-                  className={`h-5 w-5 rounded-full border-[3px] border-[#05060A] transition-all duration-500 md:h-6 md:w-6 md:border-[4px] ${
-                    item.isCurrent
-                      ? "bg-[#7F5AF0] shadow-[0_0_25px_rgba(127,90,240,0.9)] ring-2 ring-[#7F5AF0]/50"
-                      : "bg-[#7F5AF0] shadow-[0_0_15px_rgba(127,90,240,0.5)]"
-                  }`}
-                />
-                {item.isCurrent && (
-                  <div className="absolute inset-0 -z-10 animate-ping rounded-full bg-[#7F5AF0] opacity-40" />
+                <div className="relative z-10 flex items-center justify-center">
+                  <div
+                    className={`h-5 w-5 rounded-full border-[3px] border-[#05060A] transition-all duration-500 md:h-6 md:w-6 md:border-[4px] ${
+                      item.isCurrent
+                        ? "bg-[#7F5AF0] shadow-[0_0_25px_rgba(127,90,240,0.9)] ring-2 ring-[#7F5AF0]/50"
+                        : "bg-[#7F5AF0] shadow-[0_0_15px_rgba(127,90,240,0.5)]"
+                    }`}
+                  />
+                  {item.isCurrent && (
+                    <div className="absolute inset-0 -z-10 animate-ping rounded-full bg-[#7F5AF0] opacity-40" />
+                  )}
+                </div>
+
+                {item.position === "bottom" && (
+                  <div className="absolute top-full mt-3 flex flex-col items-center">
+                    <div className="h-16 w-px bg-gradient-to-b from-[#7F5AF0] to-transparent opacity-60" />
+                    <div className="mt-3">
+                      <EducationCard item={item} />
+                    </div>
+                  </div>
                 )}
               </div>
-
-              {item.position === "bottom" && (
-                <div className="absolute top-full mt-2 flex flex-col items-center md:mt-3">
-                  <div className="h-[8vh] min-h-[2rem] max-h-[5rem] w-px bg-gradient-to-b from-[#7F5AF0] to-transparent opacity-60" />
-                  <div className="mt-2 md:mt-3">
-                    <EducationCard item={item} />
-                  </div>
-                </div>
-              )}
-            </div>
-          ))}
+            ))}
+          </div>
         </div>
 
-        <div className="relative mt-12 flex flex-1 flex-col justify-center gap-8 md:hidden">
-          <div className="absolute bottom-0 left-[1.1rem] top-2 w-1 rounded-full bg-white/[0.05]" />
-          <div
-            className="absolute left-[1.1rem] top-2 w-1 rounded-full bg-[#7F5AF0] shadow-[0_0_15px_rgba(127,90,240,0.5)]"
-            style={{ height: "90%" }}
-          />
+        {/* 
+          MOBILE TIMELINE 
+          Also uses flex-1 and justify-center to center vertically between heading and bottom. 
+        */}
+        <div className="flex flex-col justify-center flex-1 md:hidden w-full relative mt-8">
+          <div className="relative flex flex-col gap-8">
+            <div className="absolute bottom-0 left-[1.1rem] top-2 w-1 rounded-full bg-white/[0.05]" />
+            <div
+              className="absolute left-[1.1rem] top-2 w-1 rounded-full bg-[#7F5AF0] shadow-[0_0_15px_rgba(127,90,240,0.5)]"
+              style={{ height: "90%" }}
+            />
 
-          {educationData.map((item) => (
-            <div key={item.id} className="relative pl-12">
-              <div className="absolute left-[0.7rem] top-5 z-10 h-4 w-4 rounded-full border-[3px] border-[#05060A] bg-[#7F5AF0] shadow-[0_0_10px_rgba(127,90,240,0.8)]" />
-              <EducationCard item={item} align="left" />
-            </div>
-          ))}
+            {educationData.map((item) => (
+              <div key={item.id} className="relative pl-12">
+                <div className="absolute left-[0.7rem] top-5 z-10 h-4 w-4 rounded-full border-[3px] border-[#05060A] bg-[#7F5AF0] shadow-[0_0_10px_rgba(127,90,240,0.8)]" />
+                <EducationCard item={item} />
+              </div>
+            ))}
+          </div>
         </div>
+
       </div>
     </section>
   );
