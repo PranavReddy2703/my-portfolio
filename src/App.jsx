@@ -1,3 +1,4 @@
+import { useEffect, useState } from "react";
 import Navbar from "./components/layout/Navbar";
 import Hero from "./components/sections/Hero";
 import About from "./components/sections/About";
@@ -6,17 +7,32 @@ import Projects from "./components/sections/Projects";
 import Education from "./components/sections/Education";
 import Contact from "./components/sections/Contact";
 import Footer from "./components/layout/Footer";
+import Loader from "./components/ui/Loader";
 
 // Font Imports
-import '@fontsource/plus-jakarta-sans/500.css';
-import '@fontsource/plus-jakarta-sans/700.css';
-import '@fontsource/plus-jakarta-sans/800.css';
+import "@fontsource/plus-jakarta-sans/500.css";
+import "@fontsource/plus-jakarta-sans/700.css";
+import "@fontsource/plus-jakarta-sans/800.css";
 
 function App() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 1600);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  if (isLoading) {
+    return <Loader />;
+  }
+
   return (
     <div className="relative min-h-screen w-full overflow-x-hidden scroll-smooth bg-[#05060A] font-jakarta text-white">
       <Navbar />
-      
+
       <main className="relative z-10">
         <Hero />
         <About />
@@ -25,6 +41,7 @@ function App() {
         <Education />
         <Contact />
       </main>
+
       <Footer />
     </div>
   );
