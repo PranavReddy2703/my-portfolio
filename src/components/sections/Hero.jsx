@@ -1,5 +1,6 @@
 import { ArrowRight } from "lucide-react";
 import ProfileCard from "../ui/ProfileCard";
+import myProfile from "../../assets/profile.png";
 
 function Hero() {
   return (
@@ -61,7 +62,7 @@ function Hero() {
           <div className="relative hidden lg:flex lg:justify-center">
             <div className="w-[72%] max-w-[25rem] 2xl:w-[85%] 2xl:max-w-[32rem]">
               <ProfileCard
-                avatarUrl="/profile.png"
+                avatarUrl={myProfile}
                 name=""
                 title=""
                 handle="pranavreddy2703"
