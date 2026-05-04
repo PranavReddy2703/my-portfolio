@@ -2,6 +2,7 @@ import { ArrowRight } from "lucide-react";
 import ProfileCard from "../ui/ProfileCard";
 import myProfile from "../../assets/profile.png";
 
+
 function Hero() {
   return (
     <section
@@ -63,7 +64,7 @@ function Hero() {
             <div className="w-[72%] max-w-[25rem] 2xl:w-[85%] 2xl:max-w-[32rem]">
               <ProfileCard
                 avatarUrl={myProfile}
-                name=""
+                name="A Pranav Reddy"
                 title=""
                 handle="pranavreddy2703"
                 status="Always Learning"

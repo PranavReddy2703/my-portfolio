@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Menu, X, ArrowUpRight } from "lucide-react";
+import myResume from "../../assets/resume.pdf";
 
 const navLinks = [
   { name: "Home", href: "#home" },
@@ -70,7 +71,7 @@ function Navbar() {
         {/* DESKTOP RESUME BUTTON */}
         <div className="hidden md:block">
           <a
-            href="/resume.pdf"
+            href={myResume}
             target="_blank"
             rel="noopener noreferrer"
             className="group relative inline-flex items-center justify-center gap-2 rounded-full px-4 py-2 text-[11px] font-medium uppercase tracking-[0.18em] text-white transition-all duration-300"
