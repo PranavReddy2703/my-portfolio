@@ -1,22 +1,30 @@
 @import "tailwindcss";
 
-:root, body {
-  background-color: #050505; 
+html {
+  /* Restores the smooth scrolling for your nav links */
+  scroll-behavior: smooth; 
+}
+
+body {
+  background-color: #05060A; /* Matches your theme to ensure no white flashes */
   margin: 0;
   padding: 0;
-  height: 100%;
-  width: 100%;
+  
+  /* Prevents horizontal scroll, but allows vertical window scroll */
+  overflow-x: hidden; 
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  -ms-overflow-style: none;  
+  scrollbar-width: none;  
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+::-webkit-scrollbar {
+  display: none;
 }
 
 #root {
   min-height: 100vh;
-}
-
-html, body {
-  overflow-x: hidden;
-  background-color: #05060A; /* Matches your theme to ensure no white flashes */
-  margin: 0;
-  padding: 0;
 }
 
 @keyframes softThrob {
@@ -28,20 +36,4 @@ html, body {
     transform: scale(1.8);
     opacity: 0.15;
   }
-}
-/* Keeps the page from scrolling left/right, and hides the scrollbar in Firefox/Edge */
-html, body {
-  overflow-x: hidden; 
-  background-color: #05060A; 
-  margin: 0;
-  padding: 0;
-  
-  /* Hide scrollbar for IE, Edge and Firefox */
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
-}
-
-/* Hide scrollbar for Chrome, Safari and Opera */
-::-webkit-scrollbar {
-  display: none;
 }
